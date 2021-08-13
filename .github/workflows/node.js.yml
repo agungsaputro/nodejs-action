@@ -51,7 +51,7 @@ jobs:
           push: true
           tags: agung1ds/nodejs-action:latest
  deploy:
-    needs: build
+    needs: docker
     runs-on: ubuntu-latest
     if: GitHub.ref == 'refs/heads/master' || GitHub.event_name == 'release'
     steps:
