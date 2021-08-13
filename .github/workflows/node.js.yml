@@ -50,6 +50,7 @@ jobs:
         with:
           push: true
           tags: agung1ds/nodejs-action:latest
+          
    deploy:
       needs: docker
       runs-on: ubuntu-latest
