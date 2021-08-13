@@ -30,7 +30,9 @@ jobs:
 #    - run: npm test
 
   docker:
+    needs: build
     runs-on: ubuntu-latest
+    if: GitHub.ref == 'refs/heads/master' || GitHub.event_name == 'release'
     steps:
       -
         name: Set up QEMU
